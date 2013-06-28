@@ -2,12 +2,11 @@ package org.scalaeuler
 
 object problem1 {
 
-	def multipleOf(factors: List[Int]): Int => Boolean =
-		x => factors exists(y => x % y == 0)
-                                                  //> multipleOf: (factors: List[Int])Int => Boolean
-	val factors = List(3,5)                   //> factors  : List[Int] = List(3, 5)
+  def multipleOf(factors: List[Int]): Int => Boolean =
+    x => factors exists (y => x % y == 0)         //> multipleOf: (factors: List[Int])Int => Boolean
+  val factors = List(3, 5)                        //> factors  : List[Int] = List(3, 5)
 
-	val multiples = 0 to 999 filter multipleOf(factors)
+  val multiples = 0 to 999 filter multipleOf(factors)
                                                   //> multiples  : scala.collection.immutable.IndexedSeq[Int] = Vector(0, 3, 5, 6,
                                                   //|  9, 10, 12, 15, 18, 20, 21, 24, 25, 27, 30, 33, 35, 36, 39, 40, 42, 45, 48, 
                                                   //| 50, 51, 54, 55, 57, 60, 63, 65, 66, 69, 70, 72, 75, 78, 80, 81, 84, 85, 87, 
@@ -22,6 +21,6 @@ object problem1 {
                                                   //| , 354, 355, 357, 360, 363, 365, 366, 369, 370, 372, 375, 378, 380, 381, 384,
                                                   //|  385, 387, 390, 393, 395
                                                   //| Output exceeds cutoff limit.
-	val answer = multiples sum                //> answer  : Int = 233168
+  val answer = multiples sum                      //> answer  : Int = 233168
 
 }
