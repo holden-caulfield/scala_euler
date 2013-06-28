@@ -10,7 +10,7 @@ object problem2 {
   
   def isEven(n: BigInt): Boolean = n % 2 == 0     //> isEven: (n: BigInt)Boolean
   
-  fib filter isEven takeWhile {_ < 4000000} sum   //> res0: BigInt = 4613732
+  fib filter isEven takeWhile { _ < 4000000 } sum //> res0: BigInt = 4613732
 
 	//Optimized version: avoids checking for every fibonacci number
 	//to see if it is even. We can use the fact that every third fibonacci
@@ -22,5 +22,5 @@ object problem2 {
 		2 #:: loop(2, 8)
 	}                                         //> optFib: => Stream[BigInt]
 
-	optFib takeWhile {_ < 4000000} sum        //> res1: BigInt = 4613732
+	optFib takeWhile { _ < 4000000 } sum      //> res1: BigInt = 4613732
 }
